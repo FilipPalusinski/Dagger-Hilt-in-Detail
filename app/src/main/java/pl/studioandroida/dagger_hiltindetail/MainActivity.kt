@@ -10,8 +10,14 @@ import javax.inject.Named
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var testString: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        Log.d("MainActivity", "Test String from MainActivity: $testString")
     }
 }
